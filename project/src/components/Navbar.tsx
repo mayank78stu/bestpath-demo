@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Lightbulb, Award, Compass, Map, BookOpen, BarChart3 } from 'lucide-react';
+// import { FaBars, FaTimes, FaRegLightbulb, FaAward, FaCompass, FaMap, FaBookOpen, FaChartBar } from 'lucide-react';
+import { FaBars, FaTimes, FaRegLightbulb, FaAward, FaCompass, FaMap, FaBookOpen, FaChartBar } from 'react-icons/fa';
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +17,7 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center">
-              <Compass className="h-8 w-8 text-primary-600" />
+              <FaCompass className="h-8 w-8 text-primary-600" />
               <span className="ml-2 text-xl font-bold text-gray-800">best<span className="text-primary-600">PATH</span></span>
             </Link>
           </div>
@@ -46,7 +48,7 @@ const Navbar = () => {
               onClick={toggleMenu}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary-600 hover:bg-primary-50 focus:outline-none"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? <FaTimes className="h-6 w-6" /> : <FaBars className="h-6 w-6" />}
             </button>
           </div>
         </div>
@@ -61,7 +63,7 @@ const Navbar = () => {
               className="flex items-center px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50"
               onClick={() => setIsOpen(false)}
             >
-              <Award className="mr-2 h-5 w-5" />
+              <FaAward className="mr-2 h-5 w-5" />
               Scholarships
             </Link>
             <Link 
@@ -69,7 +71,7 @@ const Navbar = () => {
               className="flex items-center px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50"
               onClick={() => setIsOpen(false)}
             >
-              <Lightbulb className="mr-2 h-5 w-5" />
+              <FaRegLightbulb className="mr-2 h-5 w-5" />
               Find Your Interest
             </Link>
             <Link 
@@ -85,7 +87,7 @@ const Navbar = () => {
               className="flex items-center px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50"
               onClick={() => setIsOpen(false)}
             >
-              <Map className="mr-2 h-5 w-5" />
+              <FaMap className="mr-2 h-5 w-5" />
               Roadmap
             </Link>
             <Link 
@@ -93,7 +95,7 @@ const Navbar = () => {
               className="flex items-center px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50"
               onClick={() => setIsOpen(false)}
             >
-              <BookOpen className="mr-2 h-5 w-5" />
+              <FaBookOpen className="mr-2 h-5 w-5" />
               Soft Skills
             </Link>
             <Link 
@@ -101,7 +103,7 @@ const Navbar = () => {
               className="flex items-center px-3 py-2 rounded-md text-base font-medium text-white bg-primary-600 hover:bg-primary-700"
               onClick={() => setIsOpen(false)}
             >
-              <BarChart3 className="mr-2 h-5 w-5" />
+              <FaChartBar className="mr-2 h-5 w-5" />
               Dashboard
             </Link>
           </div>
